@@ -56,3 +56,14 @@ We always welcome new contributors to the project! See [How to Contribute](https
 [mcLink]: https://zookeeper.apache.org/releases
 [trBadge]: https://travis-ci.org/apache/zookeeper.svg?branch=master
 [trLink]: https://travis-ci.org/apache/zookeeper
+
+# 注意如果编译不通过问题
+- org.apache.zookeeper.data 包不存在
+  ```
+  结局方式如下
+  mvn compile -projects zookeeper-jute/
+  ```
+-  org.apache.zookeeper.version.Info 不存在
+  ```
+  将 zookeeper-server 下的 java-filtered/*** 下的Info.java倒入即可， 或则直接 右键 Marke Directory as -> sources root 
+  ``` 
